@@ -60,7 +60,7 @@ function HomeScreen() {
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = posts.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = posts?.slice(indexOfFirstItem, indexOfLastItem);
 
     const renderPageNumbers = pages.map((number) => {
         if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
