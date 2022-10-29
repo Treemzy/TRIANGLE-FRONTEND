@@ -54,7 +54,7 @@ function HomeScreen() {
 
     const pages = [];
 
-    for(let i = 1; i<=Math.ceil(posts.length/itemsPerPage); i++){
+    for(let i = 1; i<=Math.ceil(posts?.length/itemsPerPage); i++){
         pages.push(i);
     }
 
@@ -81,12 +81,12 @@ function HomeScreen() {
     })
 
     let pageIncrementBtn = null;
-    if(pages.length > maxPageNumberLimit){
+    if(pages?.length > maxPageNumberLimit){
         pageIncrementBtn =  <li onClick={handleNextBtn}>
                                 <button 
                                     class="page-link"  
                                     aria-label="Next"
-                                    disabled={currentPage == pages[pages.length - 1] ? true : false}
+                                    disabled={currentPage == pages[pages?.length - 1] ? true : false}
                                     >
                                     <span aria-hidden="true">&hellip;</span>
                                 </button>
@@ -94,7 +94,7 @@ function HomeScreen() {
     }
 
     let pageDecrementBtn = null;
-    if(pages.length > maxPageNumberLimit){
+    if(pages?.length > maxPageNumberLimit){
         pageDecrementBtn =  <li onClick={handlePrevBtn}>
                                     <button class="page-link" 
                                             aria-label="Previous"
@@ -189,7 +189,7 @@ function HomeScreen() {
                                             <button  class="page-link" 
                                                 onClick={handleNextBtn} 
                                                 aria-label="Next"
-                                                disabled={currentPage == pages[pages.length - 1] ? true : false}
+                                                disabled={currentPage == pages[pages?.length - 1] ? true : false}
                                                 >
                                             <span aria-hidden="true">&raquo;</span>
                                             </button>
