@@ -62,7 +62,7 @@ function HomeScreen() {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = posts?.slice(indexOfFirstItem, indexOfLastItem);
 
-    const renderPageNumbers = pages.map((number) => {
+    const renderPageNumbers = pages?.map((number) => {
         if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
             return(
                 <li 
@@ -162,10 +162,10 @@ function HomeScreen() {
                     <div className="row">
                         <div className="col-md-8"> 
                                 
-                                {searchShow ? filteredPosts.map((post) => (                      
+                                {searchShow ? filteredPosts?.map((post) => (                      
                                      <Posts post={post} key={post._id} />                                                        
                                 )): 
-                                    currentItems.map((post) => (                      
+                                    currentItems?.map((post) => (                      
                                         <Posts post={post} key={post._id} />                                                        
                                     ))
                                 }  
