@@ -104,7 +104,7 @@ function HomeScreen() {
                                     </button>
                                 </li>
     }
-    const filteredPosts = posts.filter(
+    const filteredPosts = posts?.filter(
         x => {
           return (
             x
