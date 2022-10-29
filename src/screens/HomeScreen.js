@@ -197,9 +197,7 @@ function HomeScreen() {
                                     </ul>
                                  </nav>                                                                             
                             </div>
-                       <div className="col-md-4">
-                          <Trending/>
-                       </div>
+                        
                        
                     </div>
                     
