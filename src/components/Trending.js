@@ -25,7 +25,7 @@ function Trending() {
                 <h3>Trending POST</h3>
                 <p className="muted"> These are Posts with high engagements.
                     <ul className="list-group reaction">
-                        {posts.map(post => (                            
+                        {posts?.map(post => (                            
                                 <Link to={`/post/${post._id}`} key={post._id} >                                   
                                     <li className="list-group-item  d-flex justify-content-between align-items-center" >
                                         <Row>
